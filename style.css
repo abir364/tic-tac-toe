@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    height: 100vh;
+}
+
+.container {
+    height: 50vh;
+    width: 40vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+    border: 1px solid black;
+}
+
+.box:nth-child(1), .box:nth-child(2), .box:nth-child(3) {
+    border-top: none;
+}
+
+.box:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.box:nth-child(3n+1) {
+    border-left: none;
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    height: 120px;
+}
