@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: Roboto;
 }
 
 body {
@@ -45,4 +48,72 @@ body {
     align-items: center;
     font-size: 24px;
     height: 120px;
+}
+
+.modal {
+    --gap: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gap);
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-inner {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+.modal-top {
+    display: flex;
+    align-items: center;
+    background-color: blueviolet;
+    justify-content: center;
+    height: 10vh;
+    
+}
+
+.modal-title {
+    /* flex-grow: 1; */
+    padding: 0 var(--gap);
+    font-size: 32px;
+    color: #fff;
+}
+
+.modal-close {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* padding: var(--gap); */
+    /* background: none; */
+    /* border: none; */
+    outline: none;
+    height: 2.5rem;
+    width: 10rem;
+}
+
+.modal-content {
+    padding: var(--gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap)
+}
+
+.remove-modal {
+    display: none;
+}
+
+.modal-close p, .modal-close span {
+    flex-grow: 1;
+    font-size: 20px;
 }

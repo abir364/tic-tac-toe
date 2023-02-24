@@ -6,15 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    <div class="buttons">
-        <!-- <div class="playerA">
-            <button>X</button>
-            <button>O</button>
-        </div> -->
+    <div class="modal remove-modal">
+        <div class="modal-inner">
+            <div class="modal-top">
+                <div class="modal-title">Results</div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-result"></div>
+                <button class="modal-close" type="button">
+                    <!-- <div> -->
+                        <p>Restart</p>
+                        <span class="material-symbols-outlined">
+                            restart_alt
+                        </span>
+                    <!-- </div> -->
+                </button>
+            </div>
+        </div>
     </div>
+    <div>X goes first</div>
     <div class="container">
         <div class="box" data-id="1"></div>
         <div class="box" data-id="2"></div>
@@ -26,5 +40,7 @@
         <div class="box" data-id="8"></div>
         <div class="box" data-id="9"></div>
     </div>
+    <button id="reset">reset</button>
+    <div id="result"></div>
 </body>
 </html>
