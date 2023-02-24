@@ -19,7 +19,7 @@ const GameBoard = (() => {
     }
   };
 
-  return { setVal, print, reset, getBoard };
+  return { setVal, reset, getBoard };
 })();
 
 // v can be either X or O
@@ -33,9 +33,6 @@ const Player = (v) => {
   return { getSymbol };
 };
 
-// const checkWin = (() => {
-
-// })();
 
 const DisplayController = (() => {
   const reset = () => {
@@ -53,7 +50,6 @@ const DisplayController = (() => {
         GameController.playRound();
         box.textContent = GameController.getCurSym();
         GameBoard.setVal(box.dataset.id, GameController.getCurSym());
-        GameBoard.print();
         resultControl(GameController.checkWinner());
       }
     });
@@ -100,16 +96,12 @@ const GameController = (() => {
 
   const playRound = () => {
     currentSym = current();
-
     round++;
-    // checkWinner();
   };
 
   let board = GameBoard.getBoard();
   const checkWinner = () => {
     board = GameBoard.getBoard();
-
-    // TODO: draw needs to be tweaked !!!!
 
     if (board[0] !== null && board[1] === board[2] && board[2] === board[0]) {
       round = 1;
