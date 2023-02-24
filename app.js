@@ -49,11 +49,13 @@ const DisplayController = (() => {
   const boxes = document.querySelectorAll(".box");
   boxes.forEach((box) => {
     box.addEventListener("click", () => {
-      GameController.playRound();
-      box.textContent = GameController.getCurSym();
-      GameBoard.setVal(box.dataset.id, GameController.getCurSym());
-      GameBoard.print();
-      resultControl(GameController.checkWinner());
+      if (box.textContent ==='') {
+        GameController.playRound();
+        box.textContent = GameController.getCurSym();
+        GameBoard.setVal(box.dataset.id, GameController.getCurSym());
+        GameBoard.print();
+        resultControl(GameController.checkWinner());
+      }
     });
   });
   const resetBtn = document.getElementById("reset");
